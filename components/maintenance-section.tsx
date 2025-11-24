@@ -18,6 +18,7 @@ import {
   Settings,
   CheckCircle2,
 } from "lucide-react"
+import Image from "next/image"
 
 const hardwareSteps = [
   {
@@ -25,6 +26,7 @@ const hardwareSteps = [
     title: "Limpieza General del PC",
     icon: Monitor,
     description: "Mantenga su equipo libre de polvo y suciedad",
+    image: "/images/maintenance/limpieza-pc.jpg",
     steps: [
       "Apague completamente el equipo y desconéctelo de la corriente",
       "Use aire comprimido para limpiar las rejillas de ventilación",
@@ -39,6 +41,7 @@ const hardwareSteps = [
     title: "Mantenimiento de Ventiladores",
     icon: Fan,
     description: "Asegure una correcta ventilación del sistema",
+    image: "/images/maintenance/ventiladores.jpg",
     steps: [
       "Abra el gabinete con precaución (personal autorizado)",
       "Utilice aire comprimido para remover el polvo de los ventiladores",
@@ -53,6 +56,7 @@ const hardwareSteps = [
     title: "Revisión de Periféricos",
     icon: Keyboard,
     description: "Mantenga teclados, mouse y otros dispositivos en buen estado",
+    image: "/images/maintenance/perifericos.jpg",
     steps: [
       "Limpie el teclado con aire comprimido entre las teclas",
       "Desinfecte las teclas con un paño húmedo",
@@ -67,6 +71,7 @@ const hardwareSteps = [
     title: "Revisión de Disco Duro",
     icon: HardDrive,
     description: "Monitoree la salud de sus unidades de almacenamiento",
+    image: "/images/maintenance/disco-duro.jpg",
     steps: [
       "Ejecute diagnósticos de disco (SMART)",
       "Verifique el espacio disponible (mínimo 15% libre)",
@@ -81,6 +86,7 @@ const hardwareSteps = [
     title: "Mantenimiento de Impresoras",
     icon: Printer,
     description: "Asegure impresiones de calidad",
+    image: "/images/maintenance/impresoras.jpg",
     steps: [
       "Limpie el exterior con un paño seco",
       "Revise y limpie los rodillos de alimentación",
@@ -98,6 +104,7 @@ const softwareSteps = [
     title: "Verificación de Antivirus",
     icon: Shield,
     description: "Mantenga su sistema protegido contra amenazas",
+    image: "/images/maintenance/antivirus.jpg",
     steps: [
       "Verifique que el antivirus esté activo y actualizado",
       "Ejecute un análisis completo del sistema",
@@ -112,6 +119,7 @@ const softwareSteps = [
     title: "Actualizaciones del Sistema",
     icon: RefreshCw,
     description: "Mantenga el sistema operativo y programas actualizados",
+    image: "/images/maintenance/actualizaciones.jpg",
     steps: [
       "Acceda a Configuración > Actualización y seguridad",
       "Busque actualizaciones pendientes de Windows",
@@ -126,6 +134,7 @@ const softwareSteps = [
     title: "Limpieza de Archivos Temporales",
     icon: Trash2,
     description: "Libere espacio eliminando archivos innecesarios",
+    image: "/images/maintenance/archivos-temporales.jpg",
     steps: [
       "Abra el Liberador de espacio en disco de Windows",
       "Seleccione los tipos de archivos a eliminar",
@@ -140,6 +149,7 @@ const softwareSteps = [
     title: "Respaldo de Información",
     icon: Download,
     description: "Proteja sus datos importantes con copias de seguridad",
+    image: "/images/maintenance/respaldos.jpg",
     steps: [
       "Identifique archivos críticos para respaldar",
       "Copie los archivos a una unidad externa o nube",
@@ -154,6 +164,7 @@ const softwareSteps = [
     title: "Optimización del Sistema",
     icon: Settings,
     description: "Mejore el rendimiento general del equipo",
+    image: "/images/maintenance/optimizacion.jpg",
     steps: [
       "Revise los programas de inicio automático",
       "Desinstale software no utilizado",
@@ -204,12 +215,14 @@ function MaintenanceCard({
                   <span className="font-semibold">Frecuencia recomendada:</span> {item.frequency}
                 </p>
               </div>
-              {/* Placeholder para imagen instructiva */}
-              <div className="mt-4 aspect-video bg-slate-100 rounded-lg flex items-center justify-center border-2 border-dashed border-slate-200">
-                <div className="text-center text-slate-400">
-                  <Icon className="w-10 h-10 mx-auto mb-2 opacity-50" />
-                  <p className="text-sm">Imagen instructiva</p>
-                </div>
+              <div className="mt-4 aspect-video rounded-lg overflow-hidden border border-slate-200 shadow-sm">
+                <Image
+                  src={item.image || "/placeholder.svg"}
+                  alt={`Imagen instructiva: ${item.title}`}
+                  width={400}
+                  height={225}
+                  className="w-full h-full object-cover"
+                />
               </div>
             </AccordionContent>
           </AccordionItem>

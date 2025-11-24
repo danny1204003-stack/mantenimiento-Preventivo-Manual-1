@@ -4,25 +4,22 @@ import { Linkedin, Mail, Github } from "lucide-react"
 
 const teamMembers = [
   {
-    name: "Carlos Mendoza",
-    role: "Líder de Proyecto",
-    bio: "Ingeniero en sistemas con más de 10 años de experiencia en infraestructura TI y gestión de proyectos tecnológicos.",
-    avatar: "/professional-man-portrait.png",
-    initials: "CM",
+    name: "Br. Dannys Gerig",
+    role: "Desarrollador",
+    avatar: "/images/dannys.png",
+    initials: "DG",
   },
   {
-    name: "María García",
-    role: "Especialista en Hardware",
-    bio: "Técnica certificada en mantenimiento de equipos de cómputo y redes. Experta en diagnóstico y reparación.",
-    avatar: "/professional-woman-portrait.png",
-    initials: "MG",
+    name: "Br. Joswerd Olivo",
+    role: "Desarrollador",
+    avatar: "/images/joswer.png",
+    initials: "JO",
   },
   {
-    name: "Andrés López",
-    role: "Administrador de Software",
-    bio: "Desarrollador full-stack especializado en automatización de procesos y seguridad informática.",
-    avatar: "/professional-man-glasses-portrait.png",
-    initials: "AL",
+    name: "Br. Johangel Avila",
+    role: "Desarrollador",
+    avatar: "/images/johangel.png",
+    initials: "JA",
   },
 ]
 
@@ -33,7 +30,7 @@ export function TeamSection() {
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">Equipo de Desarrollo</h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-             Equipo comprometidos con mantener la excelencia tecnológica de nuestra institución
+            Equipo comprometidos con mantener la excelencia tecnológica de nuestra institución
           </p>
         </div>
 
@@ -52,7 +49,11 @@ export function TeamSection() {
                 </Avatar>
                 <h3 className="text-xl font-bold text-slate-900 mb-1">{member.name}</h3>
                 <p className="text-sm font-medium text-blue-600 mb-3">{member.role}</p>
-                <p className="text-sm text-slate-600 leading-relaxed mb-4">{member.bio}</p>
+                <div className="text-sm text-slate-600 leading-relaxed mb-4 space-y-1">
+                  <p className="font-medium">Estudiante del PNF en Informática</p>
+                  <p>Universidad Politécnica Territorial del Estado Aragua "Federico Brito Figueroa"</p>
+                  <p className="font-semibold text-blue-600">Trayecto 1</p>
+                </div>
                 <div className="flex justify-center gap-3">
                   <button className="p-2 rounded-lg bg-slate-100 text-slate-600 hover:bg-blue-100 hover:text-blue-600 transition-colors">
                     <Mail className="w-4 h-4" />

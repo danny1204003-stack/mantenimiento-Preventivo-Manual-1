@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Menu, X, Monitor } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const navLinks = [
@@ -43,10 +43,12 @@ export function Header() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo Institución */}
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-lg bg-blue-500 flex items-center justify-center">
-              <Monitor className="w-6 h-6 text-white" />
-            </div>
-            <span className="hidden sm:block font-semibold text-white">Institución</span>
+            <img
+              src="/images/insignia-25-de-marzo.png"
+              alt="Logo UEN 25 de Marzo"
+              className="w-12 h-12 rounded-lg object-contain bg-white"
+            />
+            <span className="hidden sm:block font-semibold text-white">U.E.N. "25 de Marzo"</span>
           </div>
 
           {/* Navegación Desktop */}
