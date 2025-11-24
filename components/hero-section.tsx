@@ -33,13 +33,11 @@ export function HeroSection() {
         </div>
 
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight text-balance drop-shadow-lg">
-          Centro de Tecnología e Innovación
+          U.E.N. "25 de Marzo"
         </h1>
 
         <p className="text-lg sm:text-xl text-slate-200 mb-8 max-w-2xl mx-auto leading-relaxed text-pretty drop-shadow">
-          Somos una institución comprometida con la excelencia tecnológica, proporcionando recursos y guías
-          especializadas para garantizar el óptimo funcionamiento de todos nuestros equipos informáticos y sistemas de
-          software.
+          Se encuentra ubicada en San Mateo – Estado Aragua, en la calle Roscio S/N, Sector 23 de Enero. La Escuela es en homenaje a la II Batalla de San Mateo realizada en este pueblo el 25 de Marzo de 1814, cuando inmoló su vida el Neogranadino Antonio Ricaurte, al volar el fortín donde se encontraba antes de que fuera tomado por los realistas, comandados por José Tomás Boves.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">

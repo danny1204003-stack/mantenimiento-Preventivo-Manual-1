@@ -5,8 +5,9 @@ import { Menu, X, Monitor, Settings } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const navLinks = [
-  { name: "Inicio", href: "#inicio" },
+  { name: "Mantenimiento", href: "#inicio" },
   { name: "Software", href: "#software" },
+  { name: "Glosario", href: "#glosario" },
   { name: "Equipo", href: "#equipo" },
 ]
 
@@ -63,7 +64,7 @@ export function Header() {
 
           {/* Logo Proyecto */}
           <div className="flex items-center gap-2">
-            <span className="hidden sm:block font-semibold text-white">TI Dept.</span>
+            <span className="hidden sm:block font-semibold text-white">UPTA "Federico Brito Figueroa"</span>
             <div className="w-10 h-10 rounded-lg bg-blue-500 flex items-center justify-center">
               <Settings className="w-6 h-6 text-white" />
             </div>

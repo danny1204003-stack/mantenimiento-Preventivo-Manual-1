@@ -33,7 +33,7 @@ export function TeamSection() {
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">Equipo de Desarrollo</h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Profesionales comprometidos con mantener la excelencia tecnológica de nuestra institución
+             Equipo comprometidos con mantener la excelencia tecnológica de nuestra institución
           </p>
         </div>
 
